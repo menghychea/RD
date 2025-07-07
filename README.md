@@ -16,22 +16,28 @@
 <body class="flex flex-col min-h-screen">
 
     <header class="bg-white shadow-md p-4 w-full fixed top-0 left-0 z-50">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800 mb-4 md:mb-0 flex items-center">
+        <div class="max-w-7xl mx-auto flex items-center justify-between md:flex-row"> <!-- Adjusted for mobile flex behavior -->
+            <div class="text-2xl font-bold text-gray-800 flex items-center">
                 <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750840471/483965830_1050027857161122_7598377911211969177_n_tmxqby.jpg" alt="Company Logo" class="w-8 h-8 rounded-full object-cover mr-2">
                 <a href="./" class="hover:text-blue-600 transition duration-300 ease-in-out"> TH RESIDECNE </a>
             </div>
 
-            <nav>
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
+            <!-- Hamburger Menu Button (visible on small screens) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-[#7E252C] focus:outline-none focus:ring-2 focus:ring-blue-500 p-2 rounded-md">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Navigation (hidden on small screens by default, shown on md and up) -->
+            <nav id="main-navigation" class="hidden md:block w-full md:w-auto mt-4 md:mt-0">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium text-center md:text-left">
                     <li>
-                        <a href="./" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Home page</a>
+                        <a href="./" class="block text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Home page</a>
                     </li>
                     <li>
-                        <a href="./#properties-section" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Properties</a>
+                        <a href="./#properties-section" class="block text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Properties</a>
                     </li>
                     <li>
-                        <a href="#about-us-section" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">About Us</a>
+                        <a href="#about-us-section" class="block text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">About Us</a>
                     </li>
                 </ul>
             </nav>
@@ -260,5 +266,17 @@
 
         // Change slide every 5 seconds (5000 milliseconds)
         setInterval(showNextSlide, 5000);
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mainNavigation = document.getElementById('main-navigation');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mainNavigation.classList.toggle('hidden');
+            mainNavigation.classList.toggle('flex'); // Use flex for vertical stacking when open
+            mainNavigation.classList.toggle('flex-col'); // Ensure vertical stacking
+            mainNavigation.classList.toggle('items-center'); // Center items when open
+            mainNavigation.classList.toggle('space-y-4'); // Add vertical space
+        });
     </script>
 </body>
