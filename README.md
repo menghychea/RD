@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,7 @@
     <title>TH Residence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -20,16 +19,16 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="text-2xl font-bold text-gray-800 mb-4 md:mb-0 flex items-center">
                 <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750840471/483965830_1050027857161122_7598377911211969177_n_tmxqby.jpg" alt="Company Logo" class="w-8 h-8 rounded-full object-cover mr-2">
-                <a href="#" class="hover:text-blue-600 transition duration-300 ease-in-out"> TH RESIDECNE </a>
+                <a href="./" class="hover:text-blue-600 transition duration-300 ease-in-out"> TH RESIDECNE </a>
             </div>
 
             <nav>
                 <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
                     <li>
-                        <a href="#" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Home page</a>
+                        <a href="./" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Home page</a>
                     </li>
                     <li>
-                        <a href="#properties-section" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Properties</a>
+                        <a href="./#properties-section" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Properties</a>
                     </li>
                     <li>
                         <a href="#about-us-section" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">About Us</a>
@@ -54,65 +53,69 @@
             </div>
 
         <section id="properties-section" class="space-y-8">
-    <div id="project-dongkoa-i-section" class="project-dongkoa-bg w-full py-8 text-center text-[#ffffff] text-4xl font-extrabold" data-aos="fade-up" data-aos-duration="1000">
-        PROJECT DONGKOA I
-    </div>     
-    
+            <!-- Adjusted text size for better mobile responsiveness -->
+            <div id="project-dongkoa-i-section" class="project-dongkoa-bg w-full py-8 text-center text-[#ffffff] text-3xl sm:text-4xl md:text-5xl font-extrabold" data-aos="fade-up" data-aos-duration="1000">
+                PROJECT DONGKOA I
+            </div>     
+            
             <div class="max-w-7xl mx-auto px-4 py-8">
-    <div class="flex space-x-2 overflow-x-auto pb-4 hide-scrollbar md:grid md:grid-cols-2 md:gap-5">
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card flex flex-col flex-shrink-0 card-min-width" data-aos="fade-up" data-aos-duration="1000">
-            <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/SHOPHOUSE_EVENING_VIEW022_fobfwt.jpg" alt="Shophouse" class="w-full h-64 object-cover">
-            <div class="p-6 flex-grow flex flex-col justify-between">
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">SHOPHOUSE / ផ្ទះអាជីវកម្ម</h3>
-                    <div class="flex items-center text-gray-700 mb-2">
-                        <i class="fa-solid fa-bed w-5 h-5 mr-2 text-gray-500"></i>
-                        <span>6 Bedrooms</span>
+                <!-- Adjusted classes for responsive card display -->
+                <div class="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar md:grid md:grid-cols-2 md:gap-5">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card flex flex-col flex-shrink-0 w-[90vw] max-w-sm md:w-auto md:max-w-none" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/SHOPHOUSE_EVENING_VIEW022_fobfwt.jpg" alt="Shophouse" class="w-full h-64 object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">SHOPHOUSE / ផ្ទះអាជីវកម្ម</h3>
+                                <div class="flex items-center text-gray-700 mb-2">
+                                    <i class="fa-solid fa-bed w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span>6 Bedrooms</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-2">
+                                    <i class="fa-solid fa-bath w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span>7 Bathrooms</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-4">
+                                    <i class="fa-solid fa-dollar-sign w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span class="font-bold text-[#7E252C]">800$</span><span class="text-sm ml-1">/ខែ</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-4">
+                                    <svg class="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    <span>Dong Kao I, Phnom Penh</span>
+                                </div>
+                            </div>
+                            <a href="shophouse-details.html" class="mt-4 bg-[#7E252C] text-white py-2 px-4 rounded-md hover:bg-red-800 transition duration-300 ease-in-out more-details-button">More Details</a>
+                        </div>
                     </div>
-                    <div class="flex items-center text-gray-700 mb-2">
-                        <i class="fa-solid fa-bath w-5 h-5 mr-2 text-gray-500"></i>
-                        <span>7 Bathrooms</span>
-                    </div>
-                    <div class="flex items-center text-gray-700 mb-4">
-                        <i class="fa-solid fa-dollar-sign w-5 h-5 mr-2 text-gray-500"></i>
-                        <span class="font-bold text-[#7E252C]">800$</span><span class="text-sm ml-1">/ខែ</span>
-                    </div>
-                    <div class="flex items-center text-gray-700 mb-4">
-                        <svg class="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <span>Dong Kao I, Phnom Penh</span>
-                    </div>
-                </div>
-                <a href="shophouse-details.html" class="mt-4 bg-[#7E252C] text-white py-2 px-4 rounded-md hover:bg-red-800 transition duration-300 ease-in-out more-details-button">More Details</a>
-            </div>
-        </div>
 
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card flex flex-col flex-shrink-0 card-min-width" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/LINK_HOUSE_EVENING_VIEW055_sjwwk5.jpg" alt="Link House" class="w-full h-64 object-cover">
-            <div class="p-6 flex-grow flex flex-col justify-between">
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">LINK HOUSE </h3>
-                    <div class="flex items-center text-gray-700 mb-2">
-                        <i class="fa-solid fa-bed w-5 h-5 mr-2 text-gray-500"></i>
-                        <span>5 Bedrooms</span>
-                    </div>
-                    <div class="flex items-center text-gray-700 mb-2">
-                        <i class="fa-solid fa-bath w-5 h-5 mr-2 text-gray-500"></i>
-                        <span>6 Bathrooms</span>
-                    </div>
-                    <div class="flex items-center text-gray-700 mb-4">
-                        <i class="fa-solid fa-dollar-sign w-5 h-5 mr-2 text-gray-500"></i>
-                        <span class="font-bold text-[#7E252C]">600$</span><span class="text-sm ml-1">/ខែ</span>
-                    </div>
-                    <div class="flex items-center text-gray-700 mb-4">
-                        <svg class="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <span>Dong Kao I, Phnom Penh</span>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card flex flex-col flex-shrink-0 w-[90vw] max-w-sm md:w-auto md:max-w-none" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/LINK_HOUSE_EVENING_VIEW055_sjwwk5.jpg" alt="Link House" class="w-full h-64 object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">LINK HOUSE </h3>
+                                <div class="flex items-center text-gray-700 mb-2">
+                                    <i class="fa-solid fa-bed w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span>5 Bedrooms</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-2">
+                                    <i class="fa-solid fa-bath w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span>6 Bathrooms</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-4">
+                                    <i class="fa-solid fa-dollar-sign w-5 h-5 mr-2 text-gray-500"></i>
+                                    <span class="font-bold text-[#7E252C]">600$</span><span class="text-sm ml-1">/ខែ</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-4">
+                                    <svg class="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    <span>Dong Kao I, Phnom Penh</span>
+                                </div>
+                            </div>
+                            <a href="linkhouse-details.html" class="mt-4 bg-[#7E252C] text-white py-2 px-4 rounded-md hover:bg-red-800 transition duration-300 ease-in-out more-details-button">More Details</a>
+                        </div>
                     </div>
                 </div>
-                <a href="linkhouse-details.html" class="mt-4 bg-[#7E252C] text-white py-2 px-4 rounded-md hover:bg-red-800 transition duration-300 ease-in-out more-details-button">More Details</a>
             </div>
-        </div>
-    </div>
-</div>
+        </section>
+        
         <section class="max-w-7xl mx-auto px-4 py-8 bg-white shadow-lg rounded-xl flex flex-col md:flex-row items-center gap-8" data-aos="fade-right" data-aos-duration="1000">
             <div class="flex-shrink-0 w-full md:w-1/2">
                 <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/SHOPHOUSE_EVENING_VIEW022_fobfwt.jpg" alt="Shophouse Detailed" class="w-full h-auto object-cover rounded-lg shadow-md">
@@ -190,8 +193,8 @@
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <h3 class="text-xl font-bold text-[#7E252C] mb-4">Useful Links</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="footer-link">Home page</a></li>
-                    <li><a href="#properties-section" class="footer-link">Properties</a></li>
+                    <li><a href="./" class="footer-link">Home page</a></li>
+                    <li><a href="./#properties-section" class="footer-link">Properties</a></li>
                     <li><a href="#about-us-section" class="footer-link">About Us</a></li>
                     <li><a href="#" class="footer-link">Privacy Policy</a></li>
                     <li><a href="#" class="footer-link">Terms of Service</a></li>
@@ -259,4 +262,3 @@
         setInterval(showNextSlide, 5000);
     </script>
 </body>
-</html>
