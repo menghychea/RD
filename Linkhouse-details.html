@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TH Residence - Link House Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Fallback background color */
+            padding-top: 64px; /* Adjust this value if header height changes */
+            position: relative;
+            z-index: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll for the main body */
+        }
+
+        /* Full page background image with blur (if desired on detail pages) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842465/MASTER_PLAN_qsvxhr.jpg'); /* Your original full-page background */
+            background-size: cover;
+            background-position: center;
+            filter: blur(2px); /* Maintain original blur amount */
+            z-index: -1;
+        }
+
+      
+
+        /* Hide scrollbar for a cleaner look, but still allow scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Ensure content blocks have a solid, opaque background for readability */
+        main section, main div.bg-white, .property-card {
+            background-color: rgb(255, 255, 255); /* Fully opaque white */
+            backdrop-filter: blur(0);
+        }
+
+        /* Styling for the 'More Details' button as an anchor tag */
+        .more-details-button {
+            display: inline-block; /* Make it behave like a block for padding/margin */
+            text-align: center; /* Center its text */
+            text-decoration: none; /* Remove underline */
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md p-4 w-full fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 mb-4 md:mb-0 flex items-center">
+                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750840471/483965830_1050027857161122_7598377911211969177_n_tmxqby.jpg" alt="Company Logo" class="w-8 h-8 rounded-full object-cover mr-2">
+                <a href="index.html" class="hover:text-[#7E252C] transition duration-300 ease-in-out"> TH RESIDECNE </a> 
+            </div>
+
+            <nav>
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
+                    <li>
+                        <a href="Test-about-us.html" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Home page</a>
+                    </li>
+                    <li>
+                        <a href="properties.html" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity0">Properties</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow p-8 max-w-7xl mx-auto w-full space-y-8">
+
+        <section class="bg-white shadow-lg rounded-xl p-8 text-gray-800">
+            <h1 class="text-4xl font-bold text-[#7E252C] mb-6 text-center">LINK HOUSE Details: Project DongKoa I</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="md:col-span-1">
+                    <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751084288/RD/linkhouse/TH_LINKHOUSE_V02_kph05j.jpg" alt="Link House Main View" class="w-full h-auto object-cover rounded-lg shadow-md mb-4">
+                    <div class="flex space-x-2 overflow-x-auto hide-scrollbar">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751084290/RD/linkhouse/TH_LINKHOUSE_V01_iag7m2.jpg" alt="Link House Interior 1" class="w-24 h-24 object-cover rounded-md cursor-pointer hover:opacity-75 transition">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751084288/RD/linkhouse/TH_LINKHOUSE_V04_p3d88s.jpg" alt="Link House Interior 2" class="w-24 h-24 object-cover rounded-md cursor-pointer hover:opacity-75 transition">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751084289/RD/linkhouse/TH_LINKHOUSE_V03_n32w6w.jpg" alt="Link House Floor Plan" class="w-24 h-24 object-cover rounded-md cursor-pointer hover:opacity-75 transition">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751084288/RD/linkhouse/TH_LINKHOUSE_V02_kph05j.jpg" alt="Link House Exterior View" class="w-24 h-24 object-cover rounded-md cursor-pointer hover:opacity-75 transition">
+                        </div>
+                </div>
+
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-semibold mb-4">Key Features</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                        <li>Location: Project DongKoa I, Phnom Penh</li>
+                        <li>Size: 4.2m x 16m (Compact and efficient design)</li>
+                        <li>Bedrooms: 4 (Comfortable space for families)</li>
+                        <li>Bathrooms: 5 (Ensuring privacy and convenience)</li>
+                        <li>Floors: 3 Stories (Optimal vertical living)</li>
+                        <li>Unique Access: Internal project road access</li>
+                        <li>Ideal For: Modern family living with a cozy community feel</li>
+                    </ul>
+
+                    <h2 class="text-3xl font-semibold mb-4">Pricing & Payment</h2>
+                    <p class="text-4xl font-bold text-[#7E252C] mb-4">Only $600<span class="text-lg text-gray-600">/month</span></p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        Experience the flexibility of **no down payment and no interest** until the construction is complete. A simplified path to owning your dream link house.
+                    </p>
+                    
+                    <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+                    <p class="text-gray-700 mb-4">
+                        Interested in a private tour or more information? We're here to help.
+                    </p>
+                    <a href="tel:+85512345678" class="bg-[#7E252C] text-white py-3 px-6 rounded-md hover:bg-red-800 transition duration-300 ease-in-out text-xl font-semibold inline-block mr-4">Call Now</a>
+                    <a href="mailto:info@thresidence.com" class="bg-gray-700 text-white py-3 px-6 rounded-md hover:bg-gray-900 transition duration-300 ease-in-out text-xl font-semibold inline-block">Email Us</a>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-semibold mb-4">Overview</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                The Link House units at Project DongKoa I offer an ideal solution for families seeking modern, comfortable living in a well-planned community. Designed for efficiency and style, these homes provide ample space with thoughtful layouts across three stories.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Each Link House is part of a vibrant development, providing access to internal project roads and fostering a secure and friendly neighborhood environment. With 4 well-sized bedrooms and 5 bathrooms, these houses are perfectly suited for contemporary family life, ensuring privacy and convenience for all residents.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Owning a TH Residence Link House is an opportunity to embrace a high-quality lifestyle within Phnom Penh's rapidly developing areas, combining affordability with modern amenities and community living.
+            </p>
+        </section>
+
+        <div class="text-center mt-8">
+            <a href="Test-about-us.html" class="bg-gray-500 text-white py-3 px-6 rounded-md hover:bg-gray-600 transition duration-300 ease-in-out text-lg">← Back to Homepage</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <div class="max-w-7xl mx-auto text-sm">
+            &copy; <span id="current-year"></span> TH Residence. All rights reserved.
+            <p class="mt-1">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Privacy Policy</a> |
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamically set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Optional: Add basic image gallery functionality (like your shophouse page might have)
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImage = document.querySelector('.md\\:col-span-1 img'); // Assumes first image is main
+            const thumbnails = document.querySelectorAll('.hide-scrollbar img');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    mainImage.src = thumbnail.src;
+                    mainImage.alt = thumbnail.alt;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

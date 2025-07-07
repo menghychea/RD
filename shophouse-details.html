@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TH Residence - Shophouse Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/shophouse.css"> 
+    <style>
+        /* Base styles for body */
+        body {
+            padding-top: 64px; /* Adjust this value if header height changes */
+        }
+        .section-padding {
+            padding-top: 4rem; /* py-16 */
+            padding-bottom: 4rem; /* py-16 */
+        }
+         .image-caption {
+            font-size: 0.875rem; /* text-sm */
+            color: #6b7280; /* text-gray-600 */
+        }
+        /* Custom style for the floor plan and interior image containers */
+        .plan-image-container, .interior-image-container {
+            border-radius: 0.5rem; /* rounded-lg */
+            overflow: hidden; /* Ensures image fits */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+        }
+        .plan-image-container img, .interior-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.25rem; /* rounded */
+            cursor: pointer; /* Indicate clickable */
+            transition: transform 0.2s ease-in-out; /* For hover effect */
+        }
+        .plan-image-container img:hover, .interior-image-container img:hover {
+            transform: scale(1.02); /* Slight zoom on hover */
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure it's on top of everything */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            backdrop-filter: blur(5px); /* Blurred background content */
+            -webkit-backdrop-filter: blur(5px); /* Safari support */
+        }
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* Ensures the whole image is visible */
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transform: scale(0.8);
+            transition: transform 0.3s ease-in-out;
+        }
+        .modal-overlay.open .modal-content {
+            transform: scale(1);
+        }
+        /* Hide scrollbar when modal is open */
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md p-4 w-full fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 mb-4 md:mb-0 flex items-center">
+                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750840471/RD/483965830_105002785711211969177_n_tmxqby.jpg" alt="Company Logo" class="w-8 h-8 rounded-full object-cover mr-2">
+                <a href="./" class="hover:text-blue-600 transition duration-300 ease-in-out"> TH RESIDENCE </a>
+            </div>
+
+            <nav>
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
+                    <li>
+                        <a href="Test-about-us.html" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Home page</a>
+                    </li>
+                    <li>
+                        <a href="properties.html" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Properties</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html" class="text-gray-700 hover:text-[#7E252C] transition duration-300 ease-in-out rounded-md p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full py-8 bg-gray-100"> <div class="max-w-7xl mx-auto px-4">
+
+            <section class="rounded-lg p-6 mb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">SHOPHOUSE / ផ្ទះអាជីវកម្ម</h1>
+                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/RD/SHOPHOUSE_EVENING_VIEW022_fobfwt.jpg" alt="Modern Shophouse Design" class="w-full h-auto rounded-lg shadow-xl mb-8">
+                
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-8 text-gray-700 text-lg font-medium mb-6">
+                    <span>ទំហំដី | Land Size: 4.5m x 20m</span>
+                    <span>ទំហំផ្ទះ | House Size: 4.5m x 14m</span>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-gray-700 text-lg mb-8">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-bed w-5 h-5 mr-2 text-gray-500"></i>
+                        <span>បន្ទប់គេង | Bedroom: 5</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-bath w-5 h-5 mr-2 text-gray-500"></i>
+                        <span>បន្ទប់ទឹក | Bathroom: 6</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-box-archive w-5 h-5 mr-2 text-gray-500"></i> <span>បន្ទប់ដាក់ឥវ៉ាន់ | Storage room: 1</span>
+                    </div>
+                </div>
+
+                <a href="3d-view.html" class="inline-block bg-[#7E252C] text-white py-3 px-8 rounded-md hover:bg-red-800 transition duration-300 ease-in-out text-xl font-semibold shadow-lg">View 3D Model</a>
+            </section>
+
+            <section class="mb-12 px-4 py-16 bg-gray-50 rounded-lg shadow-inner mt-8" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Floor Plans / ប្លង់ផ្ទះ</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="plan-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857740/Screenshot_2025-07-07_at_10.07.51_AM_hbp8oz.png" alt="Shophouse Ground Floor Plan" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857740/Screenshot_2025-07-07_at_10.07.51_AM_hbp8oz.png">
+                        <p class="image-caption text-center mt-2">GROUND FLOOR</p>
+                    </div>
+                    <div class="plan-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857982/Screenshot_2025-07-07_at_10.11.34_AM_twbpez.png" alt="Shophouse 1st Floor Plan" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857982/Screenshot_2025-07-07_at_10.11.34_AM_twbpez.png">
+                        <p class="image-caption text-center mt-2">1ST FLOOR</p>
+                    </div>
+                    <div class="plan-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857998/Screenshot_2025-07-07_at_10.12.02_AM_l6zeo1.png" alt="Shophouse 2nd Floor Plan" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857998/Screenshot_2025-07-07_at_10.12.02_AM_l6zeo1.png">
+                        <p class="image-caption text-center mt-2">2ND FLOOR</p>
+                    </div>
+                    <div class="plan-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857981/Screenshot_2025-07-07_at_10.12.24_AM_t7fohy.png" alt="Shophouse 3rd Floor Plan" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751857981/Screenshot_2025-07-07_at_10.12.24_AM_t7fohy.png">
+                        <p class="image-caption text-center mt-2">3RD FLOOR</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm text-center mt-6">
+                    <strong class="text-red-700">Note:</strong> Please replace these placeholder images with cropped sections of your "SHOPHOUSER-on-artboard-01.jpg" for each specific floor plan, or upload individual floor plan images.
+                </p>
+            </section>
+
+            <section class="mb-12 px-4 py-16 bg-white rounded-lg shadow-lg mt-8" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Interior Spaces / បរិយាកាសខាងក្នុង</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="interior-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083902/RD/shophouse/A-Living_01_f1utp8.png" alt="Living Room" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083902/RD/shophouse/A-Living_01_f1utp8.png">
+                        <p class="image-caption text-center mt-2">បន្ទប់ទទួលភ្ញៀវ | LIVINGROOM</p>
+                    </div>
+                    <div class="interior-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083894/RD/shophouse/A-Kitchen_Op02V02_ezfawu.png" alt="Kitchen" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083894/RD/shophouse/A-Kitchen_Op02V02_ezfawu.png">
+                        <p class="image-caption text-center mt-2">ផ្ទះបាយ | KITCHEN</p>
+                    </div>
+                    <div class="interior-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083896/RD/shophouse/A-Master_Bedroom_01_rake4z.png" alt="Master Bedroom" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083896/RD/shophouse/A-Master_Bedroom_01_rake4z.png">
+                        <p class="image-caption text-center mt-2">បន្ទប់គេងធំ | MASTER BEDROOM</p>
+                    </div>
+                    <div class="interior-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083900/RD/shophouse/A-Office_01_xgqidg.png" alt="Office Room" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751083900/RD/shophouse/A-Office_01_kuy097.png">
+                        <p class="image-caption text-center mt-2">បន្ទប់ការិយាល័យ | OFFICE ROOM</p>
+                    </div>
+                    <div class="interior-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751859661/RD/shophouse/PARTTY_nsa6ww.png" alt="Party Room" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751859661/RD/shophouse/PARTTY_nsa6ww.png">
+                        <p class="image-caption text-center mt-2">បន្ទប់ជប់លៀង | PARTY ROOM</p>
+                    </div>
+                    <div class="interior-image-container p-4">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751859054/RD/shophouse/A-Terrace_01_mwfoa1.png" alt="Outdoor Space" class="clickable-image" data-fullsrc="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1751859054/RD/shophouse/A-Terrace_01_mwfoa1.png">
+                        <p class="image-caption text-center mt-2">សួនច្បារខាងក្រៅ | OUTDOOR SPACE</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm text-center mt-6">
+                    <strong class="text-red-700">Note:</strong> Please replace these placeholder images with cropped sections of your "SHOPHOUSER-on-artboard-01.jpg" for each specific interior/exterior render, or upload individual images.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="fixed bottom-4 right-4 z-40">
+        <a href="https://momento360.com/e/uc/639996f7f2e4447eafd18d52c7c0d07e?utm_campaign=embed&utm_source=other&size=medium&display-plan=true" target="_blank" class="bg-[#7E252C] text-white py-3 px-6 rounded-full shadow-lg hover:bg-red-800 transition duration-300 ease-in-out text-xl font-semibold flex items-center justify-center">
+            <i class="fa-solid fa-cube mr-2"></i> View 3D
+        </a>
+    </div>
+
+    <div id="image-modal" class="modal-overlay">
+        <img id="modal-image" src="" alt="Enlarged Image" class="modal-content">
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold text-[#7E252C] mb-4">About TH Residence</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    TH Residence is committed to delivering high-quality, modern living and business spaces in prime locations across Phnom Penh. We focus on innovative design, sustainable practices, and exceptional customer service.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-[#7E252C] mb-4">Contact Us</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center md:justify-start justify-center">
+                        <i class="fa-solid fa-phone text-gray-400 mr-3"></i> 
+                        <a href="tel:+85512345678" class="text-gray-300 hover:text-white transition duration-300"> +855 12 345 678</a>
+                    </li>
+                    <li class="flex items-center md:justify-start justify-center">
+                        <i class="fa-solid fa-envelope text-gray-400 mr-3"></i> 
+                        <a href="mailto:info@thresidence.com" class="text-gray-300 hover:text-white transition duration-300">thresidence.socialmedia@gmail.com</a>
+                    </li>
+                    <li class="flex items-start md:justify-start justify-center">
+                        <i class="fa-solid fa-location-dot text-gray-400 mr-3 mt-1"></i> 
+                        <span class="text-gray-300">Project DongKoa I, Phnom Penh, Cambodia</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-[#7E252C] mb-4">Useful Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="./" class="footer-link">Home page</a></li>
+                    <li><a href="./#properties-section" class="footer-link">Properties</a></li>
+                    <li><a href="./#about-us-section" class="footer-link">About Us</a></li>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Terms of Service</a></li>
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                    <li><a href="#" class="footer-link">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-[#7E252C] mb-4">Newsletter</h3>
+                <p class="text-gray-300 text-sm mb-4">Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+                    <input type="email" placeholder="Your email address" class="flex-grow p-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-[#7E252C]">
+                    <button type="submit" class="bg-[#7E252C] text-white p-2 rounded-md hover:bg-red-800 transition duration-300 ease-in-out">Subscribe</button>
+                </form>
+                
+                <h3 class="text-xl font-bold text-[#7E252C] mb-4 mt-8">Follow Us</h3>
+                <div class="flex justify-center md:justify-start space-x-6">
+                    <a href="https://www.facebook.com/THresidences" target="_blank" aria-label="Facebook" class="social-icon text-3xl">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://t.me/THResidence" target="_blank" aria-label="Telegram" class="social-icon text-3xl">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thresidences/" target="_blank" aria-label="Instagram" class="social-icon text-3xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+            &copy; <span id="current-year-footer"></span> TH Residence. All rights reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+        AOS.init(); // Initialize AOS
+
+        // --- Image Modal/Lightbox Logic ---
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const clickableImages = document.querySelectorAll('.clickable-image'); // Select all images with this class
+
+        clickableImages.forEach(image => {
+            image.addEventListener('click', function() {
+                const fullSrc = this.getAttribute('data-fullsrc') || this.src; // Use data-fullsrc if available, else use src
+                modalImage.src = fullSrc;
+                imageModal.classList.add('open');
+                document.body.classList.add('modal-open'); // Add class to body to disable scrolling
+            });
+        });
+
+        // Close modal when clicking on the overlay
+        imageModal.addEventListener('click', function(event) {
+            // Only close if clicked directly on overlay or modal image, not descendants of modal-content
+            if (event.target === imageModal || event.target === modalImage) {
+                imageModal.classList.remove('open');
+                document.body.classList.remove('modal-open'); // Re-enable scrolling
+                modalImage.src = ''; // Clear image source for next time
+            }
+        });
+
+        // Optional: Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && imageModal.classList.contains('open')) {
+                imageModal.classList.remove('open');
+                document.body.classList.remove('modal-open');
+                modalImage.src = '';
+            }
+        });
+    </script>
+</body>
+</html>
