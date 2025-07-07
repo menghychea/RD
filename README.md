@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
     <header class="bg-white shadow-md p-4 w-full fixed top-0 left-0 z-50">
         <div class="max-w-7xl mx-auto flex items-center justify-between md:flex-row"> <!-- Adjusted for mobile flex behavior -->
             <div class="text-2xl font-bold text-gray-800 flex items-center">
-                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750840471/483965830_1050027857161122_7598377911211969177_n_tmxqby.jpg" alt="Company Logo" class="w-8 h-8 rounded-full object-cover mr-2">
+                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750840471/RD/483965830_1050027857161122_7598377911211969177_n_tmxqby.jpg" alt="Company Logo" class="w-8 h-8 rounded-full object-cover mr-2">
                 <a href="./" class="hover:text-blue-600 transition duration-300 ease-in-out"> TH RESIDECNE </a>
             </div>
 
@@ -48,13 +48,13 @@
 
         <div id="main-image-carousel" class="header-carousel-container">
             <div class="header-carousel-slide absolute inset-0 opacity-100">
-                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842465/MASTER_PLAN_qsvxhr.jpg" alt="Project Aerial View 1">
+                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842465/RD/MASTER_PLAN_qsvxhr.jpg" alt="Project Aerial View 1">
             </div>
             <div class="header-carousel-slide absolute inset-0 opacity-0">
                 <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/SHOPHOUSE_EVENING_VIEW022_fobfwt.jpg" alt="Project Aerial View 2">
             </div>
             <div class="header-carousel-slide absolute inset-0 opacity-0">
-                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/LINK_HOUSE_EVENING_VIEW055_sjwwk5.jpg" alt="Project Aerial View 3">
+                <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/RD/LINK_HOUSE_EVENING_VIEW055_sjwwk5.jpg" alt="Project Aerial View 3">
             </div>
             </div>
 
@@ -94,7 +94,7 @@
                     </div>
 
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card flex flex-col flex-shrink-0 w-[90vw] max-w-sm md:w-auto md:max-w-none" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/LINK_HOUSE_EVENING_VIEW055_sjwwk5.jpg" alt="Link House" class="w-full h-64 object-cover">
+                        <img src="https://res.cloudinary.com/dwkr6qrpf/image/upload/v1750842021/RD/LINK_HOUSE_EVENING_VIEW055_sjwwk5.jpg" alt="Link House" class="w-full h-64 object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">LINK HOUSE </h3>
@@ -280,4 +280,4 @@
         });
     </script>
 </body>
-</html>
+
